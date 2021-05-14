@@ -81,12 +81,8 @@
 \end{frame}
 %*----------- SLIDE -------------------------------------------------------------
 \begin{frame}[t]{Vehicle's dimensions}
-  \transdissolve[duration=0.5]
-  \begin{columns}[c]
-    \column{.5\textwidth}
-      
-    \column{.5\textwidth}
-  \end{columns}
+  \centering
+  \includegraphics[width=1.0\textwidth]{dimensions.png}  
 \end{frame}
 
 %*----------- SLIDE -------------------------------------------------------------
@@ -129,8 +125,8 @@
     \column{.5\textwidth}
       turBOT data calc: \\
       $F_{r} = a_{g}(\rho_{f} V_{s} - m_{v})$ \\
-      $F_{r} = 9.8 \frac{m}{s^2}(1028 \frac{kg}{m^3}* 0.016 m^3 - 16.7 kg)$ \\
-      $F_{r} = -2.47 N$
+      $F_{r} = 9.8 \frac{m}{s^2}(1028 \frac{kg}{m^3}* 0.016 m^3 - 17 kg)$ \\
+      $F_{r} = 1.64 N$
   \end{columns}
   
   It is ideal if the buoyancy is slightly positive so that the vehicle floats and at the same time can dive without much effort from the thrusters.  
@@ -152,10 +148,12 @@
         \item $v =$ Relative velocity   
       \end{itemize}
     \column{.5\textwidth}
-    turBOT data calc: \\
-      $D = -\frac{1}{2}C_{d} \rho_{f} A v^2$ \\
-      $D = -\frac{1}{2} * 0,42 * 1028 \frac{kg}{m^3} * 0,088 m^2 * 1 \frac{m}{s}$ \\
-      $D = -22.63 N$
+    Front: \\
+      $D = -\frac{1}{2} * 0.42 * 1028 \frac{kg}{m^3} * 0.164 m^2 * 1 \frac{m^2}{s^2}$ \\
+      $D = 35.49 N$ \\
+    Side: \\
+      $D = -\frac{1}{2} * 0.42 * 1028 \frac{kg}{m^3} * 0.275 m^2 * 0.5 \frac{m^2}{s^2}$ \\
+      $D =  14.34 N$
   \end{columns}
   
 
@@ -163,13 +161,18 @@
 
 %*----------- SLIDE -------------------------------------------------------------
 \begin{frame}[c]{Battery autonomy}
-  For the calculation of the battery autonomy, it was considered that the vehicle: 
+  For the calculation of the battery autonomy, it was considered that the vehicle stays stable at the same depth and move forward and laterally at 1.0 m/s and 0.5 m/s.
   
-  \begin{itemize}
-    \item Stays stable at the same depth
-    \item Moves forward at a speed of 1.0 m/s
-    \item Moves laterally at a speed of 0.5 m/s
-  \end{itemize}
+  % \begin{columns}
+  %   \column{.5\textwidth}
+  %     % \begin{itemize}
+  %     %   \item Stays stable at the same depth
+  %     %   \item Moves forward at a speed of 1.0 m/s
+  %     %   \item Moves laterally at a speed of 0.5 m/s
+  %     % \end{itemize}
+  %   \column{.5\textwidth}
+  %     According to the calculations, using 2 batteries 36 Ah, turBOT works for 2.14 hours.
+  % \end{columns}
 
   \begin{columns}
     \column{.5\textwidth}
@@ -178,7 +181,7 @@
       \includegraphics[width=1.0\textwidth]{current_graph.png}
   \end{columns}
 
-  The current that each thruster will require for them to exert the necessary force was obtained. A battery life of X hours could be estimated.
+  The current that each thruster will require for them to exert the necessary force was obtained. Using 2 batteries 18 Ah, battery life of 2.14 hours could be estimated. 
 \end{frame}
 
 %*----------- SLIDE -------------------------------------------------------------
