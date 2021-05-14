@@ -32,14 +32,16 @@
         \item Autonomous navigation
         \item Small dimensions
         \item Energetic efficiency
+        \item Emergency system
         \item Lighting system
       \end{itemize}
     \column{.5\textwidth}
       \textbf{System}
       \begin{itemize}
-        \item 5 DOF and 6 Thrusters composition
+        \item 5 DOF and 6 thrusters composition
         \item Perceive dynamic environments
-        \item Max 0,8 x 0,5 x 0,5 m dimentions
+        \item 50 depth operation
+        \item 1.5 m/s max velocity
         \item Max 20 kg weight
         \item 2 h of battery autonomy
         \item Positive buoyancy
@@ -123,7 +125,7 @@
         \item $m_{v} =$ Vehicle's mass
       \end{itemize}
     \column{.5\textwidth}
-      turBOT data calc: \\
+      turBOT data calculation: \\
       $F_{r} = a_{g}(\rho_{f} V_{s} - m_{v})$ \\
       $F_{r} = 9.8 \frac{m}{s^2}(1028 \frac{kg}{m^3}* 0.016 m^3 - 17 kg)$ \\
       $F_{r} = 1.64 N$
@@ -162,23 +164,22 @@
 %*----------- SLIDE -------------------------------------------------------------
 \begin{frame}[c]{Battery autonomy}
   For the calculation of the battery autonomy, it was considered that the vehicle stays stable at the same depth and move forward and laterally at 1.0 m/s and 0.5 m/s.
-  
-  % \begin{columns}
-  %   \column{.5\textwidth}
-  %     % \begin{itemize}
-  %     %   \item Stays stable at the same depth
-  %     %   \item Moves forward at a speed of 1.0 m/s
-  %     %   \item Moves laterally at a speed of 0.5 m/s
-  %     % \end{itemize}
-  %   \column{.5\textwidth}
-  %     According to the calculations, using 2 batteries 36 Ah, turBOT works for 2.14 hours.
-  % \end{columns}
 
   \begin{columns}
     \column{.5\textwidth}
-      \includegraphics[width=1.0\textwidth]{thrust_graph.png}
+      \begin{figure}[!htb]
+        \centering
+        \includegraphics[width=1.0\textwidth]{thrust_graph.png}
+        \caption{T200 thrust (Kgf) graph}
+        \label{thruster}
+      \end{figure}
     \column{.5\textwidth}
-      \includegraphics[width=1.0\textwidth]{current_graph.png}
+      \begin{figure}[!htb]
+        \centering
+        \includegraphics[width=1.0\textwidth]{current_graph.png}
+        \caption{T200 current (A) graph}
+        \label{thruster}
+      \end{figure}
   \end{columns}
 
   The current that each thruster will require for them to exert the necessary force was obtained. Using 2 batteries 18 Ah, battery life of 2.14 hours could be estimated. 
@@ -227,8 +228,8 @@
         %   \includemedia[transparent,passcontext,addresource=SampleAudio.mp3,flashvars={source=SampleAudio.mp3},]{\color{blue}\framebox[0.4\linewidth][c]{Applause}}{APlayer.swf}
 
     \includemedia[
-      width=.8\linewidth,
-      totalheight=0.39375\linewidth,
+      width=1.0\linewidth,
+      totalheight=0.5\linewidth,
       activate=pageopen,
       passcontext, 
       addresource=Media/movies/turbot_video_cut.mp4,
